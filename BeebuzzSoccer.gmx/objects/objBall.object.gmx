@@ -26,9 +26,10 @@
           <argument>
             <kind>1</kind>
             <string>/// Set random starting velocity
-
+/*
 hspeed = random_range(-2, 2);
 vspeed = random_range(-2, 2);
+*/
 </string>
           </argument>
         </arguments>

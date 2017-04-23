@@ -29,8 +29,12 @@
 
 maxVelocity = 3;
 maxDeltaVelocity = 0.5;
+// Excitement, mainly used to ignore the target and chase the ball more :)
+minExcitement = 0.0; // Can be randomized per bee so some are more excitable than others
+maxExcitement = 1.0;
 
 team = 1; // Either team 1 or team 2
+excitement = 0; // goes from 0 - 1, 1 being the most excited
 </string>
           </argument>
         </arguments>
@@ -56,6 +60,34 @@ team = 1; // Either team 1 or team 2
             <string>/// Update velocity/direction
 
 scrUpdateBeeVelocity(self.id);
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Decay excitement
+
+var excitementDecayValue = 0.0065;
+if(excitement &gt; minExcitement) {
+  excitement = excitement - excitementDecayValue;
+}
+
+excitement = clamp(excitement, minExcitement, maxExcitement);
 </string>
           </argument>
         </arguments>

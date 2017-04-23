@@ -15,6 +15,8 @@
   <scripts name="scripts">
     <script>scripts\scrGetFieldLocationFromGlobalLocation.gml</script>
     <script>scripts\scrUpdateBeeVelocity.gml</script>
+    <script>scripts\scrKickBall.gml</script>
+    <script>scripts\scrPlayBuzzSound.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\objSetupControl</object>

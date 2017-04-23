@@ -7,6 +7,7 @@ var ballMultiplier = 1.0;
 var avoidTeammateMultiplier = 10.0;
 var avoidOpponentMultiplier = 1.0;
 var randomMultiplier = 0.5;
+var excitementMultiplier = 1.0;
 
 var avoidTeammateDistance = 70;
 var chaseBallDistance = 200;
@@ -36,7 +37,7 @@ with(beeInstance) {
     with(calculator) {
       var targetDirection = point_direction(beeX, beeY, target.x, target.y);
       var targetDistance = point_distance(beeX, beeY, target.x, target.y);
-      var targetV = targetDistance * targetMultiplier;
+      var targetV = targetDistance * targetMultiplier * ((1 - beeInstance.excitement) * excitementMultiplier);
       motion_add(targetDirection, targetV);
     }
   }
@@ -71,6 +72,10 @@ with(beeInstance) {
   
   // Add to current velocity
   motion_add(calculator.direction, calculator.speed);
+  // Clean up temp velocity calculator
+  with(calculator) {
+    instance_destroy();
+  }
   
   // Clamp velocity
   speed = clamp(speed, 0, maxVelocity);

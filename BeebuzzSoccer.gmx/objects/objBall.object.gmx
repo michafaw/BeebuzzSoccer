@@ -108,14 +108,16 @@ if (wall != noone) {
             <kind>1</kind>
             <string>/// Decay &amp; clamp speed
 
-var speedDecayValue = 0.002*maxSpeed;
+var speedDecayValue = 0.003*maxSpeed;
 var speedDecayRate = 0.99;
-if(speed &gt; 0) {
-  //speed = speed - speedDecayValue;
-  speed = speed * speedDecayRate;
+var newSpeed = 0;;
+if(speed &gt; 1.0) { 
+  newSpeed = speed * speedDecayRate;
+} else if(speed &gt; 0) {
+  newSpeed = speed - speedDecayValue;
 }
 
-excitement = clamp(speed, 0, maxSpeed);
+speed = clamp(newSpeed, 0, maxSpeed);
 </string>
           </argument>
         </arguments>

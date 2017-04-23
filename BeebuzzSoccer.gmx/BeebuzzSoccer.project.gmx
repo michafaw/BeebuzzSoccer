@@ -9,6 +9,10 @@
     <sprite>sprites\sprBall</sprite>
     <sprite>sprites\sprBall2</sprite>
     <sprite>sprites\sprTargetMarker</sprite>
+    <sprite>sprites\sprBottomWall</sprite>
+    <sprite>sprites\sprTopWall</sprite>
+    <sprite>sprites\sprLeftWall</sprite>
+    <sprite>sprites\sprRightWall</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -17,6 +21,7 @@
     <script>scripts\scrUpdateBeeVelocity.gml</script>
     <script>scripts\scrKickBall.gml</script>
     <script>scripts\scrPlayBuzzSound.gml</script>
+    <script>scripts\scrBounceOffWall.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\objSetupControl</object>
@@ -25,6 +30,11 @@
     <object>objects\objBee</object>
     <object>objects\objTarget</object>
     <object>objects\objEmpty</object>
+    <object>objects\objWall</object>
+    <object>objects\objBottomWall</object>
+    <object>objects\objTopWall</object>
+    <object>objects\objLeftWall</object>
+    <object>objects\objRightWall</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\roomSetup</room>

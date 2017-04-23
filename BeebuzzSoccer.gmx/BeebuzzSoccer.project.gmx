@@ -17,6 +17,13 @@
     <sprite>sprites\sprTopWall</sprite>
     <sprite>sprites\sprLeftWall</sprite>
     <sprite>sprites\sprRightWall</sprite>
+    <sprites name="Bee Template">
+      <sprite>sprites\sprBeeTemplateRight</sprite>
+      <sprite>sprites\sprBeeTemplateDown</sprite>
+      <sprite>sprites\sprBeeTemplateDownRight</sprite>
+      <sprite>sprites\sprBeeTemplateUp</sprite>
+      <sprite>sprites\sprBeeTemplateUpRight</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -26,6 +33,8 @@
     <script>scripts\scrKickBall.gml</script>
     <script>scripts\scrPlayBuzzSound.gml</script>
     <script>scripts\scrBounceOffWall.gml</script>
+    <script>scripts\scrUpdateBeeDirectionSprite.gml</script>
+    <script>scripts\scrSetBeeSprites.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\objSetupControl</object>
@@ -45,6 +54,19 @@
     <room>rooms\roomTitle</room>
     <room>rooms\roomField</room>
   </rooms>
+  <constants number="11">
+    <constant name="FACING_RIGHT">0</constant>
+    <constant name="FACING_UPRIGHT">1</constant>
+    <constant name="FACING_UP">2</constant>
+    <constant name="FACING_UPLEFT">3</constant>
+    <constant name="FACING_LEFT">4</constant>
+    <constant name="FACING_DOWNLEFT">5</constant>
+    <constant name="FACING_DOWN">6</constant>
+    <constant name="FACING_DOWNRIGHT">7</constant>
+    <constant name="D_BEE_SET">0</constant>
+    <constant name="K_BEE_SET">1</constant>
+    <constant name="GENERIC_BEE_SET">2</constant>
+  </constants>
   <help>
     <rtf>help.rtf</rtf>
   </help>

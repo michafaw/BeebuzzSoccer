@@ -7,10 +7,10 @@ var ballMultiplier = 1.0;
 var avoidTeammateMultiplier = 10.0;
 var avoidOpponentMultiplier = 1.0;
 var randomMultiplier = 0.5;
-var excitementMultiplier = 1.0;
+var excitementMultiplier = 2.0;
 
 var avoidTeammateDistance = 70;
-var chaseBallDistance = 200;
+var chaseBallDistance = 300;
 
 with(beeInstance) {
 
@@ -37,7 +37,7 @@ with(beeInstance) {
     with(calculator) {
       var targetDirection = point_direction(beeX, beeY, target.x, target.y);
       var targetDistance = point_distance(beeX, beeY, target.x, target.y);
-      var targetV = targetDistance * targetMultiplier * ((1 - beeInstance.excitement) * excitementMultiplier);
+      var targetV = targetDistance * targetMultiplier * ((1 - beeInstance.excitement) / excitementMultiplier);
       motion_add(targetDirection, targetV);
     }
   }

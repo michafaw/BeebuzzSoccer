@@ -53,10 +53,10 @@
   <instances>
     <instance objName="objBall" x="392" y="302" name="inst_85FFDF64" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objTarget" x="186" y="296" name="inst_C40A36DC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objBee" x="316" y="176" name="inst_2A451B65" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objBee" x="558" y="184" name="inst_7CE3ABDB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objBee" x="586" y="376" name="inst_65EFED07" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objBee" x="106" y="450" name="inst_A1893B80" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objBee" x="150" y="100" name="inst_2A451B65" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objBee" x="300" y="150" name="inst_7CE3ABDB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objBee" x="150" y="500" name="inst_65EFED07" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objBee" x="300" y="450" name="inst_A1893B80" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBottomWall" x="450" y="560" name="inst_91AD43D8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBottomWall" x="550" y="560" name="inst_6D2F2281" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBottomWall" x="650" y="560" name="inst_A1444269" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -85,6 +85,7 @@
     <instance objName="objRightWall" x="750" y="350" name="inst_0C223B88" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objRightWall" x="750" y="450" name="inst_25ED3265" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objRightWall" x="750" y="550" name="inst_8ADD6159" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objBee" x="100" y="300" name="inst_72CDA79B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

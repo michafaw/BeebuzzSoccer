@@ -4,9 +4,12 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\sndDBuzz</sound>
+  </sounds>
   <sprites name="sprites">
     <sprite>sprites\sprBall</sprite>
+    <sprite>sprites\sprBee</sprite>
     <sprite>sprites\sprBall2</sprite>
     <sprite>sprites\sprTargetMarker</sprite>
     <sprite>sprites\sprBottomWall</sprite>

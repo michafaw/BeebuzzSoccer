@@ -3,7 +3,7 @@
 var beeInstance = argument0;
 
 if(beeInstance.activeSound == noone || !audio_is_playing(beeInstance.activeSound)) {
-  var buzzSound = audio_play_sound(sndDBuzz, 0, false);
+  var buzzSound = audio_play_sound(choose(sndDBuzz, sndKBuzz), 0, false);
   beeInstance.activeSound = buzzSound;
   
   switch (choose(0, 4, 7, -5, -8)) {

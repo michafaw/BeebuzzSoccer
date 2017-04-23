@@ -5,12 +5,24 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
+  <sprites name="sprites">
+    <sprite>sprites\sprBall</sprite>
+    <sprite>sprites\sprBall2</sprite>
+    <sprite>sprites\sprTargetMarker</sprite>
+  </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\scrGetFieldLocationFromGlobalLocation.gml</script>
+    <script>scripts\scrUpdateBeeVelocity.gml</script>
+  </scripts>
   <objects name="objects">
     <object>objects\objSetupControl</object>
     <object>objects\objTitleControl</object>
+    <object>objects\objBall</object>
+    <object>objects\objBee</object>
+    <object>objects\objTarget</object>
+    <object>objects\objEmpty</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\roomSetup</room>

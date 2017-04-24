@@ -15,7 +15,10 @@ if(wallInstance.object_index == objBottomWall) {
 } else if(wallInstance.object_index == objLeftWall) {
   ballInstance.hspeed = max(minDepenetrationVelocity, abs(vx));
 } else if(wallInstance.object_index == objRightWall) {
-  ballInstance.hspeed = -1*max(minDepenetrationVelocity, abs(vx));
+  if(ballInstance.outOfPlay)
+    ballInstance.hspeed = max(minDepenetrationVelocity, abs(vx));
+  else
+    ballInstance.hspeed = -1*max(minDepenetrationVelocity, abs(vx));
 } 
 
 

@@ -44,7 +44,7 @@ spriteArray[FACING_UP] = sprBeeTemplateUp;
 spriteArray[FACING_DOWN] = sprBeeTemplateDown;
 spriteArray[FACING_DOWNRIGHT] = sprBeeTemplateDownRight;
 
-scrSetBeeSprites(self.id, choose(GENERIC_BEE_SET, D_BEE_SET, K_BEE_SET));
+scrSetBeeSprites(self.id, D_BEE_SET);//choose(GENERIC_BEE_SET, D_BEE_SET, K_BEE_SET));
 </string>
           </argument>
         </arguments>

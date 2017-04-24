@@ -18,12 +18,25 @@
     <sprite>sprites\sprLeftWall</sprite>
     <sprite>sprites\sprRightWall</sprite>
     <sprites name="Bee Template">
-      <sprite>sprites\sprBeeTemplateRight</sprite>
-      <sprite>sprites\sprBeeTemplateDown</sprite>
-      <sprite>sprites\sprBeeTemplateDownRight</sprite>
       <sprite>sprites\sprBeeTemplateUp</sprite>
       <sprite>sprites\sprBeeTemplateUpRight</sprite>
+      <sprite>sprites\sprBeeTemplateRight</sprite>
+      <sprite>sprites\sprBeeTemplateDownRight</sprite>
+      <sprite>sprites\sprBeeTemplateDown</sprite>
     </sprites>
+    <sprites name="D Bees">
+      <sprite>sprites\sprDBeeUp</sprite>
+      <sprite>sprites\sprDBeeUpRight</sprite>
+      <sprite>sprites\sprDBeeRight</sprite>
+      <sprite>sprites\sprDBeeDownRight</sprite>
+      <sprite>sprites\sprDBeeDown</sprite>
+    </sprites>
+    <sprites name="Heads">
+      <sprites name="D Heads">
+        <sprite>sprites\sprDRight</sprite>
+      </sprites>
+    </sprites>
+    <sprite>sprites\sprWorkspace</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>

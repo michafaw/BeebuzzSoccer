@@ -100,7 +100,7 @@
     <room>rooms\roomTitle</room>
     <room>rooms\roomField</room>
   </rooms>
-  <constants number="11">
+  <constants number="12">
     <constant name="FACING_RIGHT">0</constant>
     <constant name="FACING_UPRIGHT">1</constant>
     <constant name="FACING_UP">2</constant>
@@ -112,6 +112,7 @@
     <constant name="D_BEE_SET">0</constant>
     <constant name="K_BEE_SET">1</constant>
     <constant name="GENERIC_BEE_SET">2</constant>
+    <constant name="GAME_LENGTH">90</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

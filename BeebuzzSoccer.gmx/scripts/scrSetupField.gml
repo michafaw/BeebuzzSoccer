@@ -24,6 +24,11 @@ bee[2] = instance_create(100, 300, objBee);
 bee[3] = instance_create(150, 500, objBee);
 bee[4] = instance_create(300, 450, objBee);
 
+// Reset timer on objFieldControl
+with(objFieldControl) {
+  alarm[0] = room_speed*GAME_LENGTH;
+}
+
 // Drop ball
 with(objBall)
   instance_destroy();

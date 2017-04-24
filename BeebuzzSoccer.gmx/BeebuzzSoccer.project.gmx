@@ -51,6 +51,7 @@
       <sprite>sprites\sprGrass3</sprite>
       <sprite>sprites\sprGrass4</sprite>
     </sprites>
+    <sprite>sprites\sprGoalLine</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -63,6 +64,10 @@
     <script>scripts\scrUpdateBeeDirectionSprite.gml</script>
     <script>scripts\scrSetBeeSprites.gml</script>
     <script>scripts\scrSetupField.gml</script>
+    <script>scripts\scrScoreOnGoalWithBall.gml</script>
+    <script>scripts\scrRunDelayedScript.gml</script>
+    <script>scripts\scrNullScript.gml</script>
+    <script>scripts\scrDropBall.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\objSetupControl</object>
@@ -78,6 +83,8 @@
     <object>objects\objLeftWall</object>
     <object>objects\objRightWall</object>
     <object>objects\objGrass</object>
+    <object>objects\objGoalLine</object>
+    <object>objects\objDelayedScriptRunner</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\roomSetup</room>

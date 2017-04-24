@@ -28,6 +28,10 @@ with(calculator) {
   instance_destroy();
 }
 
+// Add upward velocity to ball (visual only) if the ball is on the ground
+if(ballInstance.height == 0)
+  ballInstance.bounceV = 2;
+
 // Stop bee velocity
 beeInstance.speed = 0;
 

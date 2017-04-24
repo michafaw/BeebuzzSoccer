@@ -24,4 +24,4 @@ bee[4] = instance_create(300, 450, objBee);
 // drop ball
 with(objBall)
   instance_destroy();
-instance_create(325, 300, objBall);
+scrRunDelayedScript(scrDropBall, room_speed);

@@ -28,6 +28,13 @@
             <string>/// Setup &amp; variables
 
 maxSpeed = 8;
+
+height = 0;
+bounceV = 0;
+
+bounceGravity = -0.08; // +v per step in pixels
+bouncePercentageLost = 0.5;
+maxBounceV = 6;
 </string>
           </argument>
         </arguments>
@@ -170,6 +177,81 @@ if (speed &gt;= 0) {
             <string>/// Adjust depth
 
 depth = -y
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Update bounce height
+
+// bounceV -&gt; - is down, + is up 
+
+// Add gravity 
+bounceV += bounceGravity;
+
+// Apply current velocity to height
+height += bounceV;
+
+// Readjust based on new values
+if(height &lt; 1 &amp;&amp; abs(bounceV) &lt; 0.1) {
+  height = 0;
+  bounceV = 0;
+} else if(height &lt; 1 &amp;&amp; bounceV &lt; 0) {
+  height = 0;
+  bounceV = abs(bounceV)*(1-bouncePercentageLost);
+}
+
+// Cap at maxBounceV
+bounceV = clamp(bounceV, -maxBounceV, maxBounceV);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Draw self at bounce height + shadow
+
+// Draw shadow
+var ballSpriteHeight = 64;
+var shadowOffset = ballSpriteHeight/2;
+var maxShadowHeight = 50;
+if(height &lt; maxShadowHeight) {
+  var radiusPercent = max(0, (maxShadowHeight - height)/maxShadowHeight);
+  draw_ellipse_colour(x-(20*radiusPercent), y+shadowOffset-(5*radiusPercent), x+(20*radiusPercent), y+shadowOffset+(5*radiusPercent), $003800, $008000, false);
+}
+// Draw ball
+draw_sprite_ext(sprite_index, image_index, x, y-height, image_xscale, image_yscale, image_angle, c_white, 1.0);
 </string>
           </argument>
         </arguments>

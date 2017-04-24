@@ -3,14 +3,14 @@
 var beeInstance = argument0;
 
 var targetMultiplier = 1.0;
-var ballMultiplier = 1.0;
+var ballMultiplier = 4.0;
 var avoidTeammateMultiplier = 10.0;
 var avoidOpponentMultiplier = 1.0;
 var randomMultiplier = 0.5;
-var excitementMultiplier = 2.0;
+var excitementMultiplier = 500.0;
 
 var avoidTeammateDistance = 70;
-var chaseBallDistance = 300;
+var chaseBallDistance = 225;
 
 with(beeInstance) {
 
@@ -37,17 +37,19 @@ with(beeInstance) {
     with(calculator) {
       var targetDirection = point_direction(beeX, beeY, target.x, target.y);
       var targetDistance = point_distance(beeX, beeY, target.x, target.y);
-      var targetV = targetDistance * targetMultiplier * ((1 - beeInstance.excitement) / excitementMultiplier);
+      var targetV = targetDistance * targetMultiplier;
       motion_add(targetDirection, targetV);
     }
   }
+  
   // Nearest Ball 
   var nearestBall = instance_nearest(beeX, beeY, objBall);
   if(point_distance(beeX, beeY, nearestBall.x, nearestBall.y) < chaseBallDistance) {
     with(calculator) {
       var nearestBallDirection = point_direction(beeX, beeY, nearestBall.x, nearestBall.y);
       var nearestBallDistance = point_distance(beeX, beeY, nearestBall.x, nearestBall.y);
-      var nearestBallV = (chaseBallDistance - nearestBallDistance) * ballMultiplier;
+      show_debug_message("nearestBallDistance: " + string(nearestBallDistance));
+      var nearestBallV = (chaseBallDistance - nearestBallDistance) * ballMultiplier + (beeInstance.excitement * excitementMultiplier);
       motion_add(nearestBallDirection, nearestBallV);
     }
   }

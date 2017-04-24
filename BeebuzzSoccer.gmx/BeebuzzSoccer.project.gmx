@@ -57,7 +57,9 @@
     </sprites>
     <sprite>sprites\sprGoalLine</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\bgTitle</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scrGetFieldLocationFromGlobalLocation.gml</script>
@@ -77,6 +79,7 @@
   <fonts name="fonts">
     <font>fonts\fntSegoeBlack72</font>
     <font>fonts\fntSegoeBlack127</font>
+    <font>fonts\fntComicSans16</font>
   </fonts>
   <objects name="objects">
     <object>objects\objSetupControl</object>

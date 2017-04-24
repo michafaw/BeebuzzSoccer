@@ -71,7 +71,12 @@
     <script>scripts\scrRunDelayedScript.gml</script>
     <script>scripts\scrNullScript.gml</script>
     <script>scripts\scrDropBall.gml</script>
+    <script>scripts\scrGameOver.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\fntSegoeBlack72</font>
+    <font>fonts\fntSegoeBlack127</font>
+  </fonts>
   <objects name="objects">
     <object>objects\objSetupControl</object>
     <object>objects\objTitleControl</object>

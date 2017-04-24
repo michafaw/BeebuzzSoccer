@@ -10,6 +10,7 @@
     <sound>sound\sndDWooHoo</sound>
     <sound>sound\sndKHorray</sound>
     <sound>sound\sndDKHorrayYay</sound>
+    <sound>sound\sndMorningChirps</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\sprBall</sprite>

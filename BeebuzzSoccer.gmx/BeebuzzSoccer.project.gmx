@@ -31,12 +31,26 @@
       <sprite>sprites\sprDBeeDownRight</sprite>
       <sprite>sprites\sprDBeeDown</sprite>
     </sprites>
+    <sprites name="K Bees">
+      <sprite>sprites\sprKBeeUp</sprite>
+      <sprite>sprites\sprKBeeUpRight</sprite>
+      <sprite>sprites\sprKBeeRight</sprite>
+      <sprite>sprites\sprKBeeDownRight</sprite>
+      <sprite>sprites\sprKBeeDown</sprite>
+    </sprites>
     <sprites name="Heads">
       <sprites name="D Heads">
         <sprite>sprites\sprDRight</sprite>
+        <sprite>sprites\sprKRight</sprite>
       </sprites>
     </sprites>
     <sprite>sprites\sprWorkspace</sprite>
+    <sprites name="Grass">
+      <sprite>sprites\sprGrass</sprite>
+      <sprite>sprites\sprGrass2</sprite>
+      <sprite>sprites\sprGrass3</sprite>
+      <sprite>sprites\sprGrass4</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -48,10 +62,12 @@
     <script>scripts\scrBounceOffWall.gml</script>
     <script>scripts\scrUpdateBeeDirectionSprite.gml</script>
     <script>scripts\scrSetBeeSprites.gml</script>
+    <script>scripts\scrSetupField.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\objSetupControl</object>
     <object>objects\objTitleControl</object>
+    <object>objects\objFieldControl</object>
     <object>objects\objBall</object>
     <object>objects\objBee</object>
     <object>objects\objTarget</object>
@@ -61,6 +77,7 @@
     <object>objects\objTopWall</object>
     <object>objects\objLeftWall</object>
     <object>objects\objRightWall</object>
+    <object>objects\objGrass</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\roomSetup</room>

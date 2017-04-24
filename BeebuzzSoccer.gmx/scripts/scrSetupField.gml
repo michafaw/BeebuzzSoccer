@@ -1,5 +1,8 @@
 /// scrSetupField()
 
+// Reset score
+score = 0;
+
 // Add grass
 with(objGrass)
   instance_destroy();

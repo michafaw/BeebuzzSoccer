@@ -5,8 +5,6 @@ var ballInstance = argument1;
 
 var kickMultiplier = 2.0;
 
-show_debug_message("Kick!");
-
 var calculator = instance_create(ballInstance.x, ballInstance.y, objEmpty);
 
 with(calculator) {
